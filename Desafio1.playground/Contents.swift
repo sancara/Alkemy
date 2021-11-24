@@ -4,6 +4,7 @@ import UIKit
  */
 let tupla = (ciudad:"Paraná", partido: "Paraná" ,provincia:"Entre Ríos" , calle:["nombreCalle": "Concordia", "numero":"486", "entrecalle1":"Gualeguaychú", "entrecalle2":"Rioja"] , pais:"Argentina" ,codigoPostal: "3100")
 
+typealias Direccion = (ciudad: String, partido: String, provincia: String, calle: [String:Any], pais: String, codigoPostal: Int, piso: Int?, departamento: String?)
 
 /*
 2.   Dentro de la dirección, definir algunos tipos  de datos opcionales, entre ellos piso y        departamento.

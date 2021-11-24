@@ -54,8 +54,23 @@ func printer(direccion: Direccion) -> String{
     return "\(direccion)"
 }
 
-print(printer(direccion: direccion3))
+//print(printer(direccion: direccion3))
 
 /*
 5.   Escribir una función que reciba un Array de    direcciones y devuelva un String que contenga  "piso: \(piso) ; depto: \(departamento)",      SOLO para las direcciones que tengan           definidos tanto un piso como un departamento.
 */
+
+func printerDirecciones (direcciones: [Direccion] ) -> String {
+    var respuesta = ""
+    for direccion in direcciones {
+        if direccion.piso != nil && direccion.departamento != nil {
+             respuesta += "piso: \(direccion.piso) ; depto: \(direccion.departamento)"
+        } else {
+            respuesta += "La dirección no es un departamento"
+        }
+        
+    }
+    return respuesta
+}
+
+print(printerDirecciones(direcciones: [direccion1, direccion2, direccion3]))

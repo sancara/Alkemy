@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="Trivia" customModuleProvider="target">
+            <connections>
+                <outlet property="alkemyLogoStart" destination="w0c-YA-0w4" id="a2T-Nz-Ydv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="w0c-YA-0w4">
+                    <rect key="frame" x="141" y="102" width="132" height="132"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="132" id="ODT-MC-VZ2"/>
+                        <constraint firstAttribute="height" constant="132" id="xEX-dX-3S2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alkemy Trivia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9o-K1-UZn">
+                    <rect key="frame" x="20" y="274" width="374" height="41"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ai-6Q-zJe">
+                    <rect key="frame" x="20" y="365" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tb5-tn-etn">
+                    <rect key="frame" x="20" y="396" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-XD-K38">
+                    <rect key="frame" x="40" y="772" width="334" height="50"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="w1o-aW-AWI"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Empezar"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.89803921568627454" green="0.96078431372549022" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="tb5-tn-etn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2ge-QV-0Y4"/>
+                <constraint firstItem="w0c-YA-0w4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="58" id="2nN-c5-A4H"/>
+                <constraint firstItem="tb5-tn-etn" firstAttribute="top" secondItem="2ai-6Q-zJe" secondAttribute="bottom" constant="10" id="2sN-x5-AzP"/>
+                <constraint firstItem="2ai-6Q-zJe" firstAttribute="top" secondItem="j9o-K1-UZn" secondAttribute="bottom" constant="50" id="69L-ia-zgS"/>
+                <constraint firstItem="d2l-XD-K38" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="6g5-KS-ixK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tb5-tn-etn" secondAttribute="trailing" constant="20" id="CJ1-SF-gac"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d2l-XD-K38" secondAttribute="trailing" constant="40" id="Ixo-65-XhM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j9o-K1-UZn" secondAttribute="trailing" constant="20" id="L1D-WS-cga"/>
+                <constraint firstItem="w0c-YA-0w4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Sdf-QF-AXP"/>
+                <constraint firstItem="2ai-6Q-zJe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aEM-kG-Ztj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2ai-6Q-zJe" secondAttribute="trailing" constant="20" id="f3x-gA-shK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="d2l-XD-K38" secondAttribute="bottom" constant="40" id="lJN-zf-BAe"/>
+                <constraint firstItem="j9o-K1-UZn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="prT-bv-Skb"/>
+                <constraint firstItem="j9o-K1-UZn" firstAttribute="top" secondItem="w0c-YA-0w4" secondAttribute="bottom" constant="40" id="ubb-t7-eeb"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Image" width="64" height="46"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -10,6 +10,11 @@ import UIKit
 class InitialViewController: UIViewController {
     
     @IBOutlet weak var alkemyLogoStart: UIImageView!
+    @IBOutlet weak var textField: UITextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,7 +23,11 @@ class InitialViewController: UIViewController {
         alkemyLogoStart.layer.borderColor = UIColor.white.cgColor
         alkemyLogoStart.layer.borderWidth = 4
     }
-
+    @IBAction func startTrivia(_ sender: Any) {
+        let userName = textField.text!
+        print(userName)
+    }
+    
 
     /*
     // MARK: - Navigation

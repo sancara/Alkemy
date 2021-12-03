@@ -16,7 +16,27 @@ struct Calculator {
       }
     return filteredNums
   }
+    
+    func map(_ nums: [Int], using transform: (Int) -> Int) -> [Int] {
+            var mappedNums = [Int]()
+            for num in nums {
+                mappedNums.append(transform(num))
+            }
+            return mappedNums
+        }
+        func sort(_ nums: [Int], by areInIncreasingOrder: (Int, Int) -> Bool) -> [Int] {
+            var nums = nums
+            for indexOne in 1..<nums.count {
+                var indexTwo = indexOne
+                while indexTwo > 0 && areInIncreasingOrder(nums[indexTwo], nums[indexTwo - 1]) {
+                    nums.swapAt(indexTwo - 1, indexTwo)
+                    indexTwo -= 1
+                }
+            }
+            return nums
+        }
 }
+    
 
 let calc = Calculator()
 let numbers = [1,2,3]
@@ -29,3 +49,11 @@ print(sum)
 let rainfallInInches = [5,2,8,0,0,4]
 let rainyDays = calc.filter(rainfallInInches, using: { rainFall in rainFall != 0 })
 print(rainyDays)
+
+let roomPrices = [50,100,150,200,250,500]
+let roomPricesWithSurchase = calc.map(roomPrices) { $0 + 20 }
+print(roomPricesWithSurchase)
+
+let calories = [400, 800, 500, 1_000]
+let sortedCalories = calc.sort(calories, by: <)
+print(sortedCalories)

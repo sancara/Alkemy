@@ -24,8 +24,16 @@ class InitialViewController: UIViewController {
         alkemyLogoStart.layer.borderWidth = 4
     }
     @IBAction func startTrivia(_ sender: Any) {
-        let userName = textField.text!
-        print(userName)
+        
+        if textField.hasText {
+            let vc = QuestionViewController(
+            nibName: "QuestionViewController", bundle: nil
+            )
+            self.present(vc, animated: true)
+        }
+        else {
+            print("Por favor ingrese su usuario")
+        }
     }
     
 

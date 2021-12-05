@@ -25,25 +25,36 @@ class InitialViewController: UIViewController {
     }
     
     @IBAction func startTriviaTapped(_ sender: Any) {
-        if textField.hasText {
-            let vc = QuestionViewController(nibName: "QuestionViewControler", bundle: nil)
-            self.present(vc, animated: true)
+        if let username = textField.text, !username.isEmpty {
+            presentTabBarController()
         
         } else {
-            print("Ingrese un usuario")
+            presentNoUsernameAlert()
         }
-    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+    private func presentNoUsernameAlert() {
+        let alert = UIAlertController(title: "Alerta", message: "Por favor ingresa un nombre de usuario", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        }
+        
+    private func presentTabBarController() {
+        
+        let tabBarController = TabBarViewController()
+        tabBarController.modalPresentationStyle = .overFullScreen
+        self.present(tabBarController, animated: true, completion: nil)
+        
+        
+        
+        
+        //let categoriesViewController = CategoriesViewController(nibName: "CategoriesViewController", bundle: nil)
+        //let navigationController = UINavigationController(rootViewController: categoriesViewController)
+        //navigationController.modalPresentationStyle = .overFullScreen
+        //self.present(navigationController, animated: true)
+        
     }
-    */
-
+    
+    
 }

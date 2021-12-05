@@ -23,17 +23,16 @@ class InitialViewController: UIViewController {
         alkemyLogoStart.layer.borderColor = UIColor.white.cgColor
         alkemyLogoStart.layer.borderWidth = 4
     }
-    @IBAction func startTrivia(_ sender: Any) {
-        
+    
+    @IBAction func startTriviaTapped(_ sender: Any) {
         if textField.hasText {
-            let vc = QuestionViewController(
-            nibName: "QuestionViewController", bundle: nil
-            )
+            let vc = QuestionViewController(nibName: "QuestionViewControler", bundle: nil)
             self.present(vc, animated: true)
+        
+        } else {
+            print("Ingrese un usuario")
         }
-        else {
-            print("Por favor ingrese su usuario")
-        }
+    
     }
     
 

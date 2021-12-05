@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target">
             <connections>
+                <outlet property="questionLabel" destination="bGr-K3-Uhi" id="Y4f-CG-LGK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,56 +18,62 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZa-zX-tl7">
-                    <rect key="frame" x="30" y="84" width="354" height="48"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random question?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmn-D7-qUZ">
-                    <rect key="frame" x="20" y="274" width="374" height="48"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3q-3E-zzz">
-                    <rect key="frame" x="50" y="722" width="100" height="100"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVV-1C-Bze">
+                    <rect key="frame" x="40" y="712" width="100" height="100"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="Lwf-N0-cth"/>
-                        <constraint firstAttribute="width" constant="100" id="w6A-FV-pnK"/>
+                        <constraint firstAttribute="height" constant="100" id="Eii-jZ-kfk"/>
+                        <constraint firstAttribute="width" constant="100" id="R8l-8A-dUy"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
                         <backgroundConfiguration key="background" image="x-button"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="wrongAnswerTapped:" destination="-1" eventType="touchUpInside" id="XDS-59-HqY"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-Qj-qoG">
-                    <rect key="frame" x="264" y="722" width="100" height="100"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U18-lm-WBB">
+                    <rect key="frame" x="274" y="712" width="100" height="100"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="fh1-WA-hQN"/>
-                        <constraint firstAttribute="width" constant="100" id="y29-Oq-gHY"/>
+                        <constraint firstAttribute="width" constant="100" id="eR0-gl-HCA"/>
+                        <constraint firstAttribute="height" constant="100" id="zQL-uO-LCx"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
                         <backgroundConfiguration key="background" image="checked"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="rightAnswerTapped:" destination="-1" eventType="touchUpInside" id="cLs-7W-PIj"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RANDOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ0-hy-5UL">
+                    <rect key="frame" x="20" y="74" width="374" height="48"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Quién quiere ser millonario?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-K3-Uhi">
+                    <rect key="frame" x="20" y="322" width="374" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.89803921568627454" green="0.96078431372549022" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pmn-D7-qUZ" secondAttribute="trailing" constant="20" id="44T-ew-hcM"/>
-                <constraint firstItem="KZa-zX-tl7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="8NF-Ut-o0O"/>
-                <constraint firstItem="D3q-3E-zzz" firstAttribute="top" secondItem="Pmn-D7-qUZ" secondAttribute="bottom" constant="400" id="E8T-cC-Bzp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J7X-Qj-qoG" secondAttribute="trailing" constant="50" id="HOF-aY-vVe"/>
-                <constraint firstItem="Pmn-D7-qUZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JCU-U2-XEh"/>
-                <constraint firstItem="J7X-Qj-qoG" firstAttribute="top" secondItem="Pmn-D7-qUZ" secondAttribute="bottom" constant="400" id="LOu-vl-GBg"/>
-                <constraint firstItem="D3q-3E-zzz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="bWs-rF-KBn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KZa-zX-tl7" secondAttribute="trailing" constant="30" id="dcp-1s-sz0"/>
-                <constraint firstItem="KZa-zX-tl7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="o9V-yV-Qh3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J7X-Qj-qoG" secondAttribute="bottom" constant="40" id="wGK-vf-N8u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="U18-lm-WBB" secondAttribute="trailing" constant="40" id="2EB-eD-UpV"/>
+                <constraint firstItem="ZJ0-hy-5UL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="62k-0o-WgE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EVV-1C-Bze" secondAttribute="bottom" constant="50" id="7FJ-bi-F8u"/>
+                <constraint firstItem="EVV-1C-Bze" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="GLY-ar-hcv"/>
+                <constraint firstItem="bGr-K3-Uhi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QDp-mK-6mw"/>
+                <constraint firstItem="bGr-K3-Uhi" firstAttribute="top" secondItem="ZJ0-hy-5UL" secondAttribute="bottom" constant="200" id="TVE-4Q-cET"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="U18-lm-WBB" secondAttribute="bottom" constant="50" id="WFc-cU-9Fs"/>
+                <constraint firstItem="ZJ0-hy-5UL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dAs-ZO-h2o"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZJ0-hy-5UL" secondAttribute="trailing" constant="20" id="gB3-6s-M68"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bGr-K3-Uhi" secondAttribute="trailing" constant="20" id="h0H-r6-gwk"/>
             </constraints>
-            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+            <point key="canvasLocation" x="139" y="94"/>
         </view>
     </objects>
     <resources>

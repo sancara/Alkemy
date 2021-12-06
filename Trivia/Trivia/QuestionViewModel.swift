@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 class QuestionViewModel {
     private let questionsService: QuestionsService
     private var questions = [Question]()
@@ -14,7 +15,7 @@ class QuestionViewModel {
         self.questionsService = service
     }
     
-    func getQuestions(for categoryID: Int, completion: @escaping() -> Void) {
+    func getQuestions(for categoryID: Int?, completion: @escaping() -> Void) {
         questionsService.getQuestions(for: categoryID) {[weak self] questions in
             guard let strongSelf = self else { return }
             

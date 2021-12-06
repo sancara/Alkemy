@@ -19,6 +19,9 @@
 		1C93CE7B275D68F0006880E3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93CE7A275D68F0006880E3 /* TabBarViewController.swift */; };
 		1C93CE7E275D69FA006880E3 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C93CE7C275D69FA006880E3 /* CategoriesViewController.xib */; };
 		1C93CE7F275D69FA006880E3 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93CE7D275D69FA006880E3 /* CategoriesViewController.swift */; };
+		1C93CE81275E47B7006880E3 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93CE80275E47B7006880E3 /* CategoriesViewModel.swift */; };
+		1C93CE83275E4BDF006880E3 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93CE82275E4BDF006880E3 /* QuestionViewModel.swift */; };
+		1C93CE85275E4F9D006880E3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93CE84275E4F9D006880E3 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		1C93CE7A275D68F0006880E3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1C93CE7C275D69FA006880E3 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		1C93CE7D275D69FA006880E3 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		1C93CE80275E47B7006880E3 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		1C93CE82275E4BDF006880E3 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		1C93CE84275E4F9D006880E3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +75,13 @@
 			isa = PBXGroup;
 			children = (
 				1C491A8A2757A42D008B959C /* AppDelegate.swift */,
+				1C93CE80275E47B7006880E3 /* CategoriesViewModel.swift */,
+				1C93CE82275E4BDF006880E3 /* QuestionViewModel.swift */,
 				1C491A8C2757A42D008B959C /* SceneDelegate.swift */,
 				1C491A9F2757A44D008B959C /* InitialViewController.swift */,
 				1C93CE7A275D68F0006880E3 /* TabBarViewController.swift */,
 				1C93CE7C275D69FA006880E3 /* CategoriesViewController.xib */,
+				1C93CE84275E4F9D006880E3 /* Question.swift */,
 				1C93CE7D275D69FA006880E3 /* CategoriesViewController.swift */,
 				1C2EF424275CE21C0048900A /* QuestionViewController.xib */,
 				1C2EF425275CE21C0048900A /* QuestionViewController.swift */,
@@ -159,11 +168,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C491A8F2757A42D008B959C /* ViewController.swift in Sources */,
+				1C93CE85275E4F9D006880E3 /* Question.swift in Sources */,
 				1C2EF427275CE21C0048900A /* QuestionViewController.swift in Sources */,
 				1C491A8B2757A42D008B959C /* AppDelegate.swift in Sources */,
 				1C491A8D2757A42D008B959C /* SceneDelegate.swift in Sources */,
 				1C93CE7B275D68F0006880E3 /* TabBarViewController.swift in Sources */,
+				1C93CE81275E47B7006880E3 /* CategoriesViewModel.swift in Sources */,
 				1C93CE7F275D69FA006880E3 /* CategoriesViewController.swift in Sources */,
+				1C93CE83275E4BDF006880E3 /* QuestionViewModel.swift in Sources */,
 				1C491AA12757A44D008B959C /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

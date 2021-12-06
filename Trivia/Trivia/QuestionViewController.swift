@@ -11,13 +11,22 @@ class QuestionViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
     
-    private let questions = Contenido.shared.obtener_preguntas()
+    private let questions = Contenido.shared.getQuestions()
     private var currentQuestionIndex = 0
     
+    private var viewModel: QuestionViewModel
+    
+    var categoryID: Int?
+    
     override func viewDidLoad() {
-        setCurrentQuestion(for: currentQuestionIndex)
-
+        //setCurrentQuestion(for: currentQuestionIndex)
+        viewModel = QuestionViewModel(service: QuestionService)
+        getQuestions()
         // Do any additional setup after loading the view.
+    }
+    
+    private func getQuestions() {
+        questionsService.getQuestions(for: categoryID) { [weak self] questions in guard let strong}
     }
 
     @IBAction func rightAnswerTapped(_ sender: UIButton) {

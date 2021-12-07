@@ -11,33 +11,37 @@ class QuestionViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
     
-    private let questions = Contenido.shared.getQuestions()
+    private var questions = [Question]()
+    
     private var currentQuestionIndex = 0
     
-    private var viewModel: QuestionViewModel
+    lazy private var viewModel: QuestionViewModel = {
+        let viewModel = QuestionViewModel()
+        return viewModel
+    }()
     
     var categoryID: Int?
     
     override func viewDidLoad() {
         //setCurrentQuestion(for: currentQuestionIndex)
-        viewModel = QuestionViewModel(service: QuestionService)
-        getQuestions()
+        
+        self.getQuestions()
         // Do any additional setup after loading the view.
     }
     
     private func getQuestions() {
-        questionsService.getQuestions(for: categoryID) { [weak self] questions in guard let strong}
+        self.viewModel.getQuestions(for: self.categoryID)
     }
 
     @IBAction func rightAnswerTapped(_ sender: UIButton) {
-        let result = validateCurrentQuestion(answer: true)
-        sendResultMessage(for: result)
+        //let result = validateCurrentQuestion(answer: true)
+        //sendResultMessage(for: result)
     }
     
     
     @IBAction func wrongAnswerTapped(_ sender: UIButton) {
-        let result = validateCurrentQuestion(answer: false)
-        sendResultMessage(for: result)
+        //let result = validateCurrentQuestion(answer: false)
+        //sendResultMessage(for: result)
     }
     
     private func updateQuestion() {
@@ -57,6 +61,8 @@ class QuestionViewController: UIViewController {
     private func validateCurrentQuestion(answer: Bool) -> Bool {
         questions[currentQuestionIndex].answer == answer
     }
+    
+    
     
     /*
     // MARK: - Navigation

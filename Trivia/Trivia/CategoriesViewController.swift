@@ -5,6 +5,8 @@
 //  Created by Santiago Caraballo on 05/12/2021.
 //
 
+//categories api url: https://opentdb.com/api_category.php
+
 import UIKit
 
 class CategoriesViewController: UIViewController {

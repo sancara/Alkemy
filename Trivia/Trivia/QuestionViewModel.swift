@@ -8,20 +8,18 @@
 import Foundation
 
 class QuestionViewModel {
-    private let questionsService: QuestionsService
+    private let questionsService = QuestionsService()
     private var questions = [Question]()
     
-    init(service: QuestionsService) {
-        self.questionsService = service
-    }
-    
-    func getQuestions(for categoryID: Int?, completion: @escaping() -> Void) {
-        questionsService.getQuestions(for: categoryID) {[weak self] questions in
-            guard let strongSelf = self else { return }
-            
-            strongSelf.questions = questions
-            completion()
+    func getQuestions(for categoryID: Int?) {
+        guard let categoryID = categoryID else {
+            return
         }
+    
+        self.questionsService.getQuestions(for: categoryID) { questions in
+            self.questions = questions
+        }
+       
     }
     
 }

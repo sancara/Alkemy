@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tbvMovies: UITableView!
+    
+        
+    
+    var arrayMovies = [Movie]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getAllMovies()
@@ -18,7 +24,8 @@ class ViewController: UIViewController {
         
         let webService = MoviesWS()
         webService.getAllMovies { arrayMoviesDTO in
-            
+            self.arrayMovies = arrayMoviesDTO.toMovies
+            self.tbvMovies.reloadData()
         }
         
     }

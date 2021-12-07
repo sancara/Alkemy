@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C2EF426275CE21C0048900A /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2EF424275CE21C0048900A /* QuestionViewController.xib */; };
 		1C2EF427275CE21C0048900A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2EF425275CE21C0048900A /* QuestionViewController.swift */; };
+		1C36DE99275FD25A00CF3FC5 /* QuestionsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C36DE98275FD25A00CF3FC5 /* QuestionsServices.swift */; };
+		1C36DE9C275FD4A300CF3FC5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1C36DE9B275FD4A300CF3FC5 /* Alamofire */; };
 		1C491A8B2757A42D008B959C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C491A8A2757A42D008B959C /* AppDelegate.swift */; };
 		1C491A8D2757A42D008B959C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C491A8C2757A42D008B959C /* SceneDelegate.swift */; };
 		1C491A8F2757A42D008B959C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C491A8E2757A42D008B959C /* ViewController.swift */; };
@@ -27,6 +29,7 @@
 /* Begin PBXFileReference section */
 		1C2EF424275CE21C0048900A /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
 		1C2EF425275CE21C0048900A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		1C36DE98275FD25A00CF3FC5 /* QuestionsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsServices.swift; sourceTree = "<group>"; };
 		1C491A872757A42C008B959C /* Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C491A8A2757A42D008B959C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C491A8C2757A42D008B959C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C36DE9C275FD4A300CF3FC5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +94,7 @@
 				1C491A932757A42E008B959C /* Assets.xcassets */,
 				1C491A952757A42E008B959C /* LaunchScreen.storyboard */,
 				1C491A982757A42E008B959C /* Info.plist */,
+				1C36DE98275FD25A00CF3FC5 /* QuestionsServices.swift */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -110,6 +115,9 @@
 			dependencies = (
 			);
 			name = Trivia;
+			packageProductDependencies = (
+				1C36DE9B275FD4A300CF3FC5 /* Alamofire */,
+			);
 			productName = Trivia;
 			productReference = 1C491A872757A42C008B959C /* Trivia.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 1C491A7E2757A42C008B959C;
+			packageReferences = (
+				1C36DE9A275FD4A300CF3FC5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1C491A882757A42C008B959C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,6 +181,7 @@
 				1C491A8F2757A42D008B959C /* ViewController.swift in Sources */,
 				1C93CE85275E4F9D006880E3 /* Question.swift in Sources */,
 				1C2EF427275CE21C0048900A /* QuestionViewController.swift in Sources */,
+				1C36DE99275FD25A00CF3FC5 /* QuestionsServices.swift in Sources */,
 				1C491A8B2757A42D008B959C /* AppDelegate.swift in Sources */,
 				1C491A8D2757A42D008B959C /* SceneDelegate.swift in Sources */,
 				1C93CE7B275D68F0006880E3 /* TabBarViewController.swift in Sources */,
@@ -388,6 +400,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C36DE9A275FD4A300CF3FC5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C36DE9B275FD4A300CF3FC5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C36DE9A275FD4A300CF3FC5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C491A7F2757A42C008B959C /* Project object */;
 }

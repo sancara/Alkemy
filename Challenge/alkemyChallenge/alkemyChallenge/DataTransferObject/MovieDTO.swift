@@ -22,3 +22,19 @@ struct MovieDTO: Decodable {
     let release_date: String?
     let vote_average: Double?
 }
+
+extension MovieDTO {
+    var toMovie: Movie {
+        Movie(self)
+        
+    }
+}
+
+extension Array where Element == MovieDTO {
+    var toMovies: [Movie] {
+        self.map( {$0.toMovie} )
+    }
+}
+
+let arrayDTO: [MovieDTO]
+let arrayMovie: [Movie] = arrayDTO.toMovies

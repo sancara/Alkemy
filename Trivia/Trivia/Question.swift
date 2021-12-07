@@ -13,10 +13,8 @@ struct Question: Codable {
 }
 
 
-final class Contenido {
-    static let shared = Contenido()
-
-    private init() {}
+struct Contenido {
+    
 
     func getQuestions() -> [Question] {
         return [

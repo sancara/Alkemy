@@ -1,5 +1,5 @@
 //
-//  MovieDTO.swift
+//  Movie.swift
 //  alkemyChallenge
 //
 //  Created by Santiago Caraballo on 06/12/2021.
@@ -36,5 +36,5 @@ extension Array where Element == MovieDTO {
     }
 }
 
-let arrayDTO: [MovieDTO]
+let arrayDTO = [MovieDTO]()
 let arrayMovie: [Movie] = arrayDTO.toMovies

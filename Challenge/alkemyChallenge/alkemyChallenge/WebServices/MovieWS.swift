@@ -32,11 +32,21 @@ struct MoviesWS {
         
         request.response { dataResponse in
             
-            guard let data = dataResponse.data else { return }
+            let showData = Bool.random()
             
-            let jsonDecoder = JSONDecoder()
-            let pageMovies = try? jsonDecoder.decode(PageMovieDTO.self, from: data)
-            completionHandler(pageMovies?.results ?? [])
+            if showData {
+                
+                guard let data = dataResponse.data else { return }
+                
+                let jsonDecoder = JSONDecoder()
+                let pageMovies = try? jsonDecoder.decode(PageMovieDTO.self, from: data)
+                
+                completionHandler(pageMovies?.results ?? [])
+                
+            } else {
+                
+                completionHandler([])
+            }
             
         }
     }

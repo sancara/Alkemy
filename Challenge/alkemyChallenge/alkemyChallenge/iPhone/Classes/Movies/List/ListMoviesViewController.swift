@@ -58,7 +58,13 @@ extension ListMovieViewController {
     }
     
     func showErrorMessage (_ errorMessage: String) {
-        print("Ocurrió un error: \(errorMessage)")
+        
+        let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        self.present(alertController, animated: true) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                alertController.dismiss(animated: true, completion: nil)
+            }
+        }
     }
      
     func reloadMovies(_ arrayMovies: [Movie]) {

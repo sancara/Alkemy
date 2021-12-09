@@ -22,14 +22,17 @@ struct MoviesViewModel {
         self.bindInitRequest()
         
         self.model.getAllFavoritesMovies { arrayMoviesDTO in
-            self.bindEndRequest()
+            
             
             if arrayMoviesDTO.isEmpty {
                 self.bindError("No se encontraron resultados")
+                self.bindMovies([])
                 
             } else {
                 self.bindMovies(arrayMoviesDTO.toMovies)
             }
+            
+            self.bindEndRequest()
            
         }
         

@@ -41,9 +41,8 @@ class MovieTableViewCell: UITableViewCell {
         self.alpha = 0
         self.transform = CGAffineTransform(translationX: -100, y: 0)
         
-        let randomDelay = CGFloat.random(in: 0...(0.8))
         
-        UIView.animate(withDuration: 0.6, delay: randomDelay, options: [.curveEaseInOut], animations: {
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
             self.alpha = 1
             self.transform = .identity
         }, completion: nil)

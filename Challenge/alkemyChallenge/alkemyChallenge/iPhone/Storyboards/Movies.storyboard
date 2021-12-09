@@ -12,7 +12,7 @@
         <!--List Movie View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ListMovieViewController" customModule="alkemyChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListMovieViewController" id="Y6W-OH-hqX" customClass="ListMovieViewController" customModule="alkemyChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,6 +122,7 @@
                                             <outlet property="imgMovie" destination="oBW-qB-gxJ" id="wTi-Eg-UKJ"/>
                                             <outlet property="lblName" destination="7Rf-6E-MfF" id="c7f-vD-qNz"/>
                                             <outlet property="lblReleaseDate" destination="nIN-A6-SNc" id="IsW-3M-xP3"/>
+                                            <segue destination="zpm-DB-32k" kind="presentation" id="yMF-pb-qWe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -136,7 +137,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="39.508928571428569"/>
+            <point key="canvasLocation" x="-2087" y="-526"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="e11-1H-YSB">
+            <objects>
+                <viewController id="zpm-DB-32k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TWt-tU-REB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="S1R-AJ-STV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dS6-Wg-1yH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1249" y="-526"/>
         </scene>
     </scenes>
     <resources>

@@ -11,26 +11,40 @@ class ListMovieViewController: UIViewController {
     
     @IBOutlet weak var tbvMovies: UITableView!
     
-        
+    var viewModel = MoviesViewModel()
     
     var arrayMovies = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tbvMovies.dataSource = self
-        self.getAllMovies()
         
-           }
+    }
     
-    func getAllMovies() {
+    
+    func setupBinds() {
         
-        let webService = MoviesWS()
-        webService.getAllMovies { arrayMoviesDTO in
-            self.arrayMovies = arrayMoviesDTO.toMovies
-            self.tbvMovies.reloadData()
+        self.viewModel.bindInitRequest = { self.showLoading(true) }
+        self.viewModel.bindEndRequest = { self.showLoading(false) }
+        self.viewModel.bindError = { errorMessage in self.showErrorMessage(errorMessage) }
+        self.viewModel.bindMovies = { arrayMovies in self.reloadMovies(arrayMovies) }
+            
         }
+}
+
+extension ListMovieViewController {
+    
+    func showLoading(_ show: Bool) {
         
+    }
+    
+    func showErrorMessage (_ errorMessage: String) {
+        print("Ocurrió un error: \(errorMessage)")
+    }
+     
+    func reloadMovies(_ arrayMovies: [Movie]) {
+        self.arrayMovies = arrayMovies
+        self.tbvMovies.reloadData()
     }
 }
 

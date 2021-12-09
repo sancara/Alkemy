@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Movie View Controller-->
+        <!--Movies-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="ListMovieViewController" id="Y6W-OH-hqX" customClass="ListMovieViewController" customModule="alkemyChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,6 +131,8 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Movies" image="rectangle.3.group" catalog="system" id="e76-sU-39V"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tbvMovies" destination="8UQ-qM-TeF" id="7bX-Q1-L2d"/>
                     </connections>
@@ -156,6 +158,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="rectangle.3.group" catalog="system" width="128" height="81"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

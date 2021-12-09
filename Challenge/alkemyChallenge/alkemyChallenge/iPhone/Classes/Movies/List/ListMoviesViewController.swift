@@ -18,7 +18,8 @@ class ListMovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tbvMovies.dataSource = self
-        
+        self.setupBinds()
+        self.viewModel.getAllMovies()
     }
     
     

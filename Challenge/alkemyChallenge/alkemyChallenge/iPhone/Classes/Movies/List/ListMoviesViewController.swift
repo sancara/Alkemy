@@ -6,22 +6,26 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ListMovieViewController: UIViewController {
     
     @IBOutlet weak var tbvMovies: UITableView!
     
-    var viewModel = MoviesViewModel()
+    private lazy var refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl ()
+        control.addTarget(self, action: #selector(self.pullToRefresh), for: .valueChanged)
+        return control
+    } ()
     
+    var viewModel = MoviesViewModel()
     var arrayMovies = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tbvMovies.dataSource = self
-        self.setupBinds()
-        self.viewModel.getAllMovies()
+        self.configure()
     }
-    
+        
     
     func setupBinds() {
         
@@ -35,8 +39,22 @@ class ListMovieViewController: UIViewController {
 
 extension ListMovieViewController {
     
+    @objc func pullToRefresh () {
+        self.viewModel.getAllMovies()
+    }
+    
+    func configure () {
+        
+        self.tbvMovies.dataSource = self
+        self.tbvMovies.addSubview(self.refreshControl)
+        
+        self.setupBinds()
+        self.viewModel.getAllMovies()
+    }
+    
     func showLoading(_ show: Bool) {
         
+        show ? self.refreshControl.beginRefreshing() : self.refreshControl.endRefreshing()
     }
     
     func showErrorMessage (_ errorMessage: String) {

@@ -25,6 +25,14 @@ class ListMovieViewController: UIViewController {
         super.viewDidLoad()
         self.configure()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let controller = segue.destination as? MovieDetailViewController, let movie = sender as? Movie {
+            controller.objMovie = movie
+        }
+    }
         
     
     func setupBinds() {
@@ -91,6 +99,6 @@ extension ListMovieViewController: UITableViewDataSource {
 extension ListMovieViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "MovieDetailViewController", sender: nil)
+        self.performSegue(withIdentifier: "MovieDetailViewController", sender: self.arrayMovies[indexPath.row])
     }
 }

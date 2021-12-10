@@ -9,4 +9,5 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
     
+    var objMovie: Movie?
 }

@@ -21,7 +21,7 @@ struct MoviesViewModel {
         
         self.bindInitRequest()
         
-        self.model.getAllFavoritesMovies { arrayMoviesDTO in
+        self.model.getAllMovies { arrayMoviesDTO in
             
             
             if arrayMoviesDTO.isEmpty {

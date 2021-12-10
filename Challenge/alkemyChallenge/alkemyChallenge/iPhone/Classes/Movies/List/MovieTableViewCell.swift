@@ -15,6 +15,7 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak private var lblReleaseDate: UILabel!
     @IBOutlet weak private var imgMovie: UIImageView!
     
+    @IBOutlet var stars: [UIImageView]!
     
     func updateData(_ movie: Movie) {
         
@@ -22,6 +23,10 @@ class MovieTableViewCell: UITableViewCell {
         
         self.lblName.text = movie.name
         self.lblReleaseDate.text = movie.releaseDateFormat
+        
+        for (index, imgStar) in self.stars.enumerated() {
+            imgStar.isHidden = !(index < movie.voteAverage)
+        }
         
         let request = AF.request(movie.urlImage)
         request.response { dataResponse in
@@ -54,7 +59,7 @@ extension MovieTableViewCell {
     
     class func buildInTableView(_ tableView: UITableView, indexPath: IndexPath, movie: Movie) -> MovieTableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Movie", for: indexPath) as? MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell
         cell?.updateData(movie)
         return cell ?? MovieTableViewCell()
     }

@@ -46,6 +46,7 @@ extension ListMovieViewController {
     func configure () {
         
         self.tbvMovies.dataSource = self
+        self.tbvMovies.delegate = self
         self.tbvMovies.addSubview(self.refreshControl)
         
         self.setupBinds()
@@ -85,4 +86,11 @@ extension ListMovieViewController: UITableViewDataSource {
     }
     
     
+}
+
+extension ListMovieViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "MovieDetailViewController", sender: nil)
+    }
 }

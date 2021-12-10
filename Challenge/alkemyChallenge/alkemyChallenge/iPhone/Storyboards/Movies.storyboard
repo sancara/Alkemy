@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Movie" id="UWr-T6-zXV" customClass="MovieTableViewCell" customModule="alkemyChallenge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" id="UWr-T6-zXV" customClass="MovieTableViewCell" customModule="alkemyChallenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UWr-T6-zXV" id="5Uj-ee-fJr">
@@ -172,7 +172,16 @@
                                             <outlet property="imgMovie" destination="oBW-qB-gxJ" id="wTi-Eg-UKJ"/>
                                             <outlet property="lblName" destination="7Rf-6E-MfF" id="c7f-vD-qNz"/>
                                             <outlet property="lblReleaseDate" destination="nIN-A6-SNc" id="IsW-3M-xP3"/>
-                                            <segue destination="zpm-DB-32k" kind="presentation" id="yMF-pb-qWe"/>
+                                            <outletCollection property="stars" destination="H4q-ja-ich" collectionClass="NSMutableArray" id="jXo-Z2-vSY"/>
+                                            <outletCollection property="stars" destination="ida-kO-r0O" collectionClass="NSMutableArray" id="4dJ-Dq-5Vy"/>
+                                            <outletCollection property="stars" destination="hRa-bn-wJd" collectionClass="NSMutableArray" id="8DO-w9-Igv"/>
+                                            <outletCollection property="stars" destination="P7C-qp-Dec" collectionClass="NSMutableArray" id="dcf-Eq-GT4"/>
+                                            <outletCollection property="stars" destination="vAF-lc-fQ9" collectionClass="NSMutableArray" id="bmW-gS-dAm"/>
+                                            <outletCollection property="stars" destination="8xX-QL-AWE" collectionClass="NSMutableArray" id="r7u-iI-kJA"/>
+                                            <outletCollection property="stars" destination="0P3-FA-41l" collectionClass="NSMutableArray" id="URH-lL-nGd"/>
+                                            <outletCollection property="stars" destination="VfD-vI-26j" collectionClass="NSMutableArray" id="9ty-jl-7vc"/>
+                                            <outletCollection property="stars" destination="uL4-fh-tFn" collectionClass="NSMutableArray" id="3yo-Ud-ZyH"/>
+                                            <outletCollection property="stars" destination="CGh-WS-yuh" collectionClass="NSMutableArray" id="uId-DS-9Pi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -191,22 +200,24 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tbvMovies" destination="8UQ-qM-TeF" id="7bX-Q1-L2d"/>
+                        <segue destination="zpm-DB-32k" kind="show" identifier="MovieDetailViewController" id="2pp-kq-J6R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2088.4057971014495" y="-526.33928571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Detail View Controller-->
         <scene sceneID="e11-1H-YSB">
             <objects>
-                <viewController id="zpm-DB-32k" sceneMemberID="viewController">
+                <viewController id="zpm-DB-32k" customClass="MovieDetailViewController" customModule="alkemyChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TWt-tU-REB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="S1R-AJ-STV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g3d-y5-bBF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dS6-Wg-1yH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

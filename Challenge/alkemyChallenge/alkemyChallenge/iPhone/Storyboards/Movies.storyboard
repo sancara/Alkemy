@@ -169,7 +169,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imgMovie" destination="oBW-qB-gxJ" id="wTi-Eg-UKJ"/>
                                             <outlet property="lblName" destination="7Rf-6E-MfF" id="c7f-vD-qNz"/>
                                             <outlet property="lblReleaseDate" destination="nIN-A6-SNc" id="IsW-3M-xP3"/>
                                             <outletCollection property="stars" destination="H4q-ja-ich" collectionClass="NSMutableArray" id="jXo-Z2-vSY"/>
@@ -411,8 +410,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="g3d-y5-bBF"/>
                     <connections>
-                        <outlet property="imgMovie" destination="jgE-D3-AMJ" id="Gel-SB-NAK"/>
-                        <outlet property="imgMovieBackground" destination="sXZ-27-INa" id="Gom-DL-9Mh"/>
+                        <outlet property="imgMovie" destination="jgE-D3-AMJ" id="X3c-PY-zOP"/>
                         <outlet property="lblName" destination="3Vn-xh-5qr" id="mmh-73-jIB"/>
                         <outlet property="lblOverview" destination="4SO-4r-kt5" id="R89-64-Cwu"/>
                         <outlet property="lblReleaseDate" destination="JgM-GO-ctc" id="5bj-1O-0nl"/>

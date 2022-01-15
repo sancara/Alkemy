@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -169,6 +169,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imgMovie" destination="oBW-qB-gxJ" id="k97-Y0-RCp"/>
                                             <outlet property="lblName" destination="7Rf-6E-MfF" id="c7f-vD-qNz"/>
                                             <outlet property="lblReleaseDate" destination="nIN-A6-SNc" id="IsW-3M-xP3"/>
                                             <outletCollection property="stars" destination="H4q-ja-ich" collectionClass="NSMutableArray" id="jXo-Z2-vSY"/>
@@ -411,6 +412,7 @@
                     <navigationItem key="navigationItem" id="g3d-y5-bBF"/>
                     <connections>
                         <outlet property="imgMovie" destination="jgE-D3-AMJ" id="X3c-PY-zOP"/>
+                        <outlet property="imgMovieBackground" destination="sXZ-27-INa" id="0zl-Nm-dBW"/>
                         <outlet property="lblName" destination="3Vn-xh-5qr" id="mmh-73-jIB"/>
                         <outlet property="lblOverview" destination="4SO-4r-kt5" id="R89-64-Cwu"/>
                         <outlet property="lblReleaseDate" destination="JgM-GO-ctc" id="5bj-1O-0nl"/>
